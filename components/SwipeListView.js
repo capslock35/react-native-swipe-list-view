@@ -214,6 +214,15 @@ class SwipeListView extends Component {
 		return this.renderCell(Component, HiddenComponent, key, item, shouldPreviewRow);
 	}
 
+
+	scrollToIndex(scrollProp){
+		this._listView.scrollToIndex(scrollProp);
+	}
+
+	scrollToEnd(){
+		this._listView.scrollToEnd({animated:true});
+	}
+
 	render() {
 		const { useFlatList, useSectionList, renderListView, ...props } = this.props;
 
